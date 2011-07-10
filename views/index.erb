@@ -2,6 +2,7 @@
 <html>
  <head>
   <title>Worker example: One-core computation</title>
+  <script type="text/javascript" src="jquery.js"></script> 
  </head>
  <body>
   <p>The highest prime number discovered so far is: <output id="result"></output></p>
@@ -13,6 +14,7 @@
 	}
    worker.onmessage = function (event) {
      document.getElementById('result').textContent = event.data;
+	 $.ajax( { type:'POST', url: "/results/"+event.data, dataType: 'json', data: [] });
    };
   </script>
  </body>
