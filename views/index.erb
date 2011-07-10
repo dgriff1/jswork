@@ -14,7 +14,7 @@
 	}
    worker.onmessage = function (event) {
      document.getElementById('result').textContent = event.data;
-	 $.ajax( { type:'POST', url: "/results/"+event.data, dataType: 'json', data: [] });
+	 $.ajax( { type:'POST', url: "/results/primes/"+event.data, dataType: 'json', data: [] });
    };
   </script>
  </body>

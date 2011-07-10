@@ -28,6 +28,6 @@ get '/work_to_do'  do
 	erb :work, :locals => { :script_src => script_src }
 end
 
-post '/results/:result' do | result | 
-	puts "REsult is ", result	
+post '/results/:key/:value' do | key, value | 
+	puts "key is ", key, " value is ", value
 end
